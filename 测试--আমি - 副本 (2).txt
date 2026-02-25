@@ -1,0 +1,864 @@
+আমি 我将基于现有文档快速生成《开发执行SOP》。让我先查看是否有相关的异常场景处理清单等资料，然后整合所有信息。 
+ 基于现有文档和搜索结果，我现在为您快速生成完整的《开发执行SOP》。这份文档将整合权限矩阵、数据库设计、UI规范等所有设计决策，转化为可直接执行的开发规范。
+
+---
+
+# 《开发执行SOP》
+
+**文档版本**：v1.0  
+**编写日期**：2026年2月17日  
+**编写人**：杨景煊  
+**适用范围**：艺术品在线交易平台全系统  
+**技术栈**：Vue 3 + Vite + SpringBoot 2.7.x + MyBatis-Plus + MySQL 8.0 + Redis 7.0
+
+---
+
+## 1. 环境配置规范（防客栈环境错误）
+
+### 1.1 开发环境强制标准
+
+| 组件 | 版本要求 | 检查命令 | 错误后果 |
+|:---|:---|:---|:---|
+| Node.js | 18.x LTS | `node -v` | Vite 5无法启动 |
+| Java | 17 LTS | `java -version` | SpringBoot 2.7.x要求 |
+| Maven | 3.8.x+ | `mvn -v` | 依赖解析失败 |
+| MySQL | 8.0.x | `mysql --version` | 字符集/JSON支持差异 |
+| Redis | 7.0.x | `redis-server --version` | 分布式锁命令差异 |
+| IDE编码 | UTF-8 | 见1.2节 | 中文乱码/SAXParseException |
+
+### 1.2 编码强制设置（防ENC-089）
+
+**IntelliJ IDEA设置路径**：
+```
+Settings → Editor → File Encodings
+├── Global Encoding: UTF-8
+├── Project Encoding: UTF-8
+├── Default encoding for properties files: UTF-8
+└── Transparent native-to-ascii conversion: ✅ 勾选
+```
+
+**SpringBoot配置文件**：
+```yaml
+# application.yml
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/artwork_platform?characterEncoding=utf8&useUnicode=true
+    # 注意：用utf8而非utf8mb4，避免驱动兼容问题
+```
+
+**Vue项目配置**：
+```javascript
+// vite.config.ts
+export default defineConfig({
+  server: {
+    // 强制开发服务器UTF-8
+    headers: {
+      'Content-Type': 'application/javascript; charset=utf-8'
+    }
+  }
+})
+```
+
+### 1.3 端口占用检查（防端口冲突）
+
+```powershell
+# PowerShell检查命令（开发前必执行）
+# 1. 检查MySQL端口
+netstat -ano | findstr :3306
+
+# 2. 检查Redis端口  
+netstat -ano | findstr :6379
+
+# 3. 检查SpringBoot端口（各服务）
+netstat -ano | findstr :8001  # 用户服务
+netstat -ano | findstr :8002  # 藏品服务
+netstat -ano | findstr :8005  # 竞拍服务
+
+# 4. 检查Vue开发服务器
+netstat -ano | findstr :5173
+```
+
+**端口分配表**：
+| 服务 | 端口 | 占用处理命令 |
+|:---|:---|:---|
+| MySQL | 3306 | `taskkill /PID <PID> /F` |
+| Redis | 6379 | `redis-cli shutdown` |
+| 用户服务 | 8001 | 自动递增或手动释放 |
+| 藏品服务 | 8002 | 自动递增或手动释放 |
+| 订单服务 | 8003 | 自动递增或手动释放 |
+| 支付服务 | 8004 | 自动递增或手动释放 |
+| 竞拍服务 | 8005 | 自动递增或手动释放 |
+| Vue H5 | 5173 | 自动递增 |
+| Vue PC | 5174 | 自动递增 |
+
+---
+
+## 2. 后端开发规范
+
+### 2.1 MyBatis-Plus XML转义强制检查（防WEB-004/005）
+
+**高危场景**：在Mapper XML中使用 `<`、`>`、`&` 等符号会导致 `SAXParseException` 
+
+**错误示例**（禁止）：
+```xml
+<!-- ❌ 错误：直接使用 < 导致XML解析失败 -->
+<select id="selectActiveAuctions" resultType="Auction">
+    SELECT * FROM t_auction 
+    WHERE status = 1 
+      AND end_time < NOW()  <!-- 报错：SAXParseException -->
+</select>
+```
+
+**正确写法**（二选一）：
+
+**方案A：XML实体转义（推荐用于简单表达式）** 
+```xml
+<!-- ✅ 正确：使用 &lt; 替换 < -->
+<select id="selectActiveAuctions" resultType="Auction">
+    SELECT * FROM t_auction 
+    WHERE status = 1 
+      AND end_time &lt; NOW()
+</select>
+
+<!-- 转义对照表 -->
+&lt;   <!-- < 小于号 -->
+&gt;   <!-- > 大于号 -->
+&amp;  <!-- & 和号 -->
+&apos; <!-- ' 单引号 -->
+&quot; <!-- " 双引号 -->
+```
+
+**方案B：CDATA区块（推荐用于复杂SQL）** 
+```xml
+<!-- ✅ 正确：使用 <![CDATA[ ]]> 包裹 -->
+<select id="selectActiveAuctions" resultType="Auction">
+    <![CDATA[
+        SELECT * FROM t_auction 
+        WHERE status = 1 
+          AND end_time < NOW()
+          AND start_price >= 10000
+    ]]>
+</select>
+```
+
+**关键规则** ：
+1. `<if>` 等动态标签**不能**放在CDATA内部（不会被解析）
+2. 混合使用时，动态标签放外面，纯SQL条件放CDATA内：
+```xml
+<!-- ✅ 正确：混合使用 -->
+<select id="selectByCondition" resultType="Artwork">
+    SELECT * FROM t_artwork
+    <where>
+        <if test="categoryId != null">
+            AND category_id = #{categoryId}
+        </if>
+        <if test="maxPrice != null">
+            <![CDATA[
+                AND fixed_price <= #{maxPrice}
+            ]]>
+        </if>
+    </where>
+</select>
+```
+
+### 2.2 提交前强制检查命令
+
+```powershell
+# 在PowerShell中执行（项目根目录）
+# 检查所有Mapper XML文件是否包含未转义的 < >
+
+# 1. 检查小于号 <
+rg -n "where.*<[^!]" src/main/resources/mapper/*.xml
+rg -n "and.*<[^!]" src/main/resources/mapper/*.xml
+rg -n "or.*<[^!]" src/main/resources/mapper/*.xml
+
+# 2. 检查大于号（可选，但建议统一）
+rg -n "where.*>" src/main/resources/mapper/*.xml
+
+# 3. 检查未转义的 &
+rg -n "&[^a]" src/main/resources/mapper/*.xml | rg -v "&amp;"
+```
+
+**检查结果处理**：
+- 无输出 = 检查通过 ✅
+- 有输出 = 存在未转义符号，必须修复 ❌
+
+### 2.3 数据库命名与SQL规范（基于数据库设计文档）
+
+**表命名**：
+```sql
+-- ✅ 正确：t_前缀 + 下划线命名 + 小写
+t_user, t_artwork, t_auction_record, t_order_log
+
+-- ❌ 错误
+user, Artwork, T_AuctionRecord, t_orderLog
+```
+
+**字段命名**：
+```sql
+-- ✅ 正确：下划线命名，避免关键字
+user_id, artwork_no, create_time, `status`  -- status加反引号
+
+-- ❌ 错误
+userId, artworkNo, createTime, status  -- 与SQL关键字冲突
+```
+
+**索引命名**：
+```sql
+-- 主键：pk_
+-- 唯一索引：uk_
+-- 普通索引：idx_
+-- 全文索引：ft_
+
+-- 示例（来自数据库设计文档）
+PRIMARY KEY (`id`),
+UNIQUE KEY `uk_artwork_no` (`artwork_no`),
+KEY `idx_seller_id` (`seller_id`),
+KEY `idx_status` (`status`),
+FULLTEXT KEY `ft_title_artist` (`title`, `artist_name`)
+```
+
+### 2.4 金额计算规范（防DATA-044/JAVA-048）
+
+**强制类型**：`BigDecimal`（禁止`double`/`float`）
+
+```java
+// ✅ 正确：BigDecimal比较
+BigDecimal price1 = new BigDecimal("15000.00");
+BigDecimal price2 = new BigDecimal("15000");
+
+if (price1.compareTo(price2) > 0) {  // 用compareTo，不是 >
+    // price1 > price2
+}
+
+// ✅ 正确：加减乘除
+BigDecimal total = price1.add(price2);        // 加
+BigDecimal diff = price1.subtract(price2);    // 减
+BigDecimal product = price1.multiply(new BigDecimal("1.2"));  // 乘
+BigDecimal avg = price1.divide(price2, 2, RoundingMode.HALF_UP);  // 除，指定精度
+
+// ❌ 错误：使用double
+double d1 = 0.1;
+double d2 = 0.2;
+System.out.println(d1 + d2);  // 0.30000000000000004
+```
+
+**数据库与Java映射**：
+| MySQL类型 | Java类型 | 精度 |
+|:---|:---|:---|
+| `DECIMAL(12,2)` | `BigDecimal` | 金额（最大99999999.99） |
+| `DECIMAL(10,2)` | `BigDecimal` | 保证金/手续费 |
+| `INT` | `Integer` | 数量/计数 |
+| `BIGINT` | `Long` | ID/大整数 |
+| `DATETIME` | `LocalDateTime` | 时间戳 |
+| `TINYINT` | `Byte` 或 `Integer` | 状态码（推荐Integer） |
+
+### 2.5 状态流转强制规范（防状态不一致）
+
+**状态变更必须通过Service方法**，禁止直接set：
+
+```java
+// ✅ 正确：使用状态流转服务
+@Service
+public class OrderStatusService {
+    
+    /**
+     * 订单状态流转（带校验）
+     */
+    public void transition(Long orderId, OrderStatus from, OrderStatus to, String operator) {
+        // 1. 校验当前状态
+        Order order = orderMapper.selectById(orderId);
+        if (order.getStatus() != from) {
+            throw new BizException("状态不匹配，当前：" + order.getStatus() + "，期望：" + from);
+        }
+        
+        // 2. 执行流转
+        order.setStatus(to);
+        orderMapper.updateById(order);
+        
+        // 3. 记录日志
+        OrderLog log = new OrderLog();
+        log.setOrderId(orderId);
+        log.setFromStatus(from);
+        log.setToStatus(to);
+        log.setOperator(operator);
+        orderLogMapper.insert(log);
+    }
+}
+
+// 使用示例
+orderStatusService.transition(
+    orderId, 
+    OrderStatus.PENDING_PAY, 
+    OrderStatus.PAID, 
+    "系统"
+);
+```
+
+---
+
+## 3. 权限配置SOP（防AUTH-054~058/403错误）
+
+### 3.1 后端接口权限配置（基于权限矩阵明细表）
+
+**强制注解**：每个Controller方法必须有权限控制
+
+```java
+@RestController
+@RequestMapping("/api/artwork")
+@Tag(name = "藏品管理")
+public class ArtworkController {
+    
+    /**
+     * 发布藏品 - 仅卖家可访问
+     */
+    @PostMapping("/publish")
+    @PreAuthorize("hasAuthority('ARTWORK:CREATE')")  // ✅ 必须
+    @DataScope(tableAlias = "a")  // ✅ 数据权限
+    public Result<Long> publish(@RequestBody ArtworkPublishDTO dto) {
+        // ...
+    }
+    
+    /**
+     * 藏品审核 - 仅管理员可访问
+     */
+    @PostMapping("/audit")
+    @PreAuthorize("hasAuthority('ADMIN:AUDIT')")  // ✅ 必须
+    public Result<Void> audit(@RequestBody ArtworkAuditDTO dto) {
+        // ...
+    }
+    
+    /**
+     * 获取竞拍详情 - 公开接口但需登录
+     */
+    @GetMapping("/auction/{id}")
+    @PreAuthorize("hasAnyRole('BUYER', 'SELLER', 'ADMIN')")  // ✅ 必须
+    public Result<AuctionVO> getAuctionDetail(@PathVariable Long id) {
+        // ...
+    }
+}
+```
+
+### 3.2 权限配置检查清单（接口开发必做）
+
+| 检查项 | 检查内容 | 错误后果 |
+|:---|:---|:---|
+| 1 | 类级别是否有`@RestController` + `@RequestMapping` | 路由混乱 |
+| 2 | 方法是否有`@PreAuthorize`或`@PermitAll` | 未授权访问 |
+| 3 | 敏感操作是否有`@DataScope` | 数据越权 |
+| 4 | 角色编码是否来自权限矩阵（大写+下划线） | 权限不匹配 |
+| 5 | 接口路径是否与权限矩阵一致 | 403错误 |
+
+### 3.3 角色与权限编码规范（来自权限矩阵）
+
+| 角色 | 编码 | 权限示例 |
+|:---|:---|:---|
+| 系统管理员 | `ADMIN` | `DASHBOARD_VIEW`, `ARTWORK_AUDIT`, `ORDER_MONITOR` |
+| 机构卖家 | `SELLER_ORG` | `ARTWORK_CREATE`, `ARTWORK_BATCH`, `ORDER_MANAGE` |
+| 个人卖家 | `SELLER_IND` | `ARTWORK_CREATE`, `ORDER_MANAGE`（无批量权限） |
+| 买家 | `BUYER` | `ARTWORK_BROWSE`, `AUCTION_JOIN`, `ORDER_VIEW` |
+| 鉴定师 | `APPRAISER` | `APPRAISAL_TASK`, `APPRAISAL_MY` |
+
+**权限编码格式**：`模块:操作`，全大写，冒号分隔
+- `ARTWORK:CREATE` - 藏品创建
+- `ORDER:PAY` - 订单支付
+- `AUCTION:BID` - 竞拍出价
+
+---
+
+## 4. 前端开发规范
+
+### 4.1 主题与样式变量（基于UI设计说明）
+
+**CSS变量定义**（`styles/variables.css`）：
+```css
+:root {
+  /* 主色调 - 深靛蓝 */
+  --color-primary: #1a365d;
+  --color-primary-light: #2c5282;
+  --color-primary-dark: #0f2942;
+  
+  /* 辅助色 - 琥珀金 */
+  --color-secondary: #d69e2e;
+  --color-secondary-light: #ecc94b;
+  --color-secondary-dark: #b7791f;
+  
+  /* 功能色 */
+  --color-success: #38a169;
+  --color-warning: #dd6b20;
+  --color-danger: #e53e3e;
+  --color-info: #3182ce;
+  
+  /* 文字色 */
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-tertiary: #718096;
+  
+  /* 背景色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --bg-tertiary: #edf2f7;
+  
+  /* 间距 - 8px基准 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  
+  /* 圆角 */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+```
+
+**字体强制规范**：
+```css
+/* 中文标题：思源宋体 */
+.font-serif {
+  font-family: 'Noto Serif SC', 'Songti SC', serif;
+}
+
+/* 正文/UI */
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+/* 数字/金额：Roboto Mono */
+.font-mono {
+  font-family: 'Roboto Mono', 'SF Mono', monospace;
+  font-feature-settings: "tnum";  /* 等宽数字 */
+}
+```
+
+### 4.2 组件使用规范（Element Plus / Vant）
+
+**PC端（Element Plus）强制规范**：
+```vue
+<template>
+  <!-- ✅ 正确：使用el-button规范 -->
+  <el-button 
+    type="primary" 
+    size="large"
+    :loading="submitting"
+    @click="handleSubmit"
+  >
+    提交审核
+  </el-button>
+  
+  <!-- ✅ 正确：表单验证 -->
+  <el-form 
+    ref="formRef"
+    :model="form"
+    :rules="rules"
+    label-width="120px"
+  >
+    <el-form-item label="藏品名称" prop="title">
+      <el-input v-model="form.title" placeholder="请输入藏品名称" />
+    </el-form-item>
+  </el-form>
+</template>
+```
+
+**移动端（Vant）强制规范**：
+```vue
+<template>
+  <!-- ✅ 正确：Vant 4组件 -->
+  <van-button 
+    type="primary" 
+    size="large"
+    :loading="bidding"
+    block
+    @click="placeBid"
+  >
+    立即出价
+  </van-button>
+  
+  <!-- ✅ 正确：数字键盘（金额输入） -->
+  <van-number-keyboard
+    v-model="bidPrice"
+    :show="showKeyboard"
+    :maxlength="10"
+    @blur="showKeyboard = false"
+  />
+</template>
+```
+
+### 4.3 状态管理规范（Pinia）
+
+**Store分层结构**（基于前端状态管理规范）：
+```typescript
+// stores/index.ts
+import { createPinia } from 'pinia'
+
+export default createPinia()
+
+// stores/user.ts - 用户状态
+export const useUserStore = defineStore('user', () => {
+  const token = ref(localStorage.getItem('token') || '')
+  const userInfo = ref<UserInfo | null>(null)
+  
+  const isLoggedIn = computed(() => !!token.value)
+  
+  const login = async (credentials: LoginDTO) => {
+    const res = await authApi.login(credentials)
+    token.value = res.token
+    localStorage.setItem('token', res.token)
+    userInfo.value = res.userInfo
+  }
+  
+  const logout = () => {
+    token.value = ''
+    userInfo.value = null
+    localStorage.removeItem('token')
+  }
+  
+  return { token, userInfo, isLoggedIn, login, logout }
+})
+
+// stores/auction.ts - 竞拍状态（WebSocket相关）
+export const useAuctionStore = defineStore('auction', () => {
+  const currentPrice = ref(0)
+  const countdown = ref(0)
+  const bidRecords = ref<BidRecord[]>([])
+  const wsConnected = ref(false)
+  
+  // WebSocket连接管理
+  let ws: WebSocket | null = null
+  
+  const connect = (artworkId: number) => {
+    ws = new WebSocket(`ws://api/auction/${artworkId}`)
+    ws.onmessage = (event) => {
+      const data = JSON.parse(event.data)
+      handleMessage(data)
+    }
+    ws.onclose = () => {
+      wsConnected.value = false
+      // 3秒后重连
+      setTimeout(() => connect(artworkId), 3000)
+    }
+    wsConnected.value = true
+  }
+  
+  const placeBid = async (price: number) => {
+    if (!wsConnected.value) {
+      // HTTP备选
+      return await auctionApi.placeBidHttp(price)
+    }
+    ws?.send(JSON.stringify({ type: 'BID', price }))
+  }
+  
+  return { currentPrice, countdown, bidRecords, wsConnected, connect, placeBid }
+})
+```
+
+### 4.4 弹窗/表单生命周期规范（防不关闭/不清空）
+
+**强制模式**：`open → reset → submit → close → cleanup`
+
+```vue
+<script setup lang="ts">
+import { ref, nextTick } from 'vue'
+
+const dialogVisible = ref(false)
+const formRef = ref<FormInstance>()
+const submitting = ref(false)
+
+// ✅ 正确：打开时重置
+const openDialog = (record?: Record) => {
+  dialogVisible.value = true
+  nextTick(() => {
+    formRef.value?.resetFields()
+    if (record) {
+      // 编辑模式：回填数据
+      Object.assign(form, record)
+    } else {
+      // 新增模式：清空
+      resetForm()
+    }
+  })
+}
+
+// ✅ 正确：提交后关闭并清理
+const handleSubmit = async () => {
+  await formRef.value?.validate()
+  submitting.value = true
+  try {
+    await submitApi(form)
+    dialogVisible.value = false
+    emit('success')
+  } finally {
+    submitting.value = false
+    // 清理临时数据
+    resetForm()
+  }
+}
+
+// ✅ 正确：关闭时强制清理
+const handleClose = () => {
+  dialogVisible.value = false
+  resetForm()
+  formRef.value?.clearValidate()
+}
+</script>
+```
+
+---
+
+## 5. 数据展示与映射规范
+
+### 5.1 ID转名称强制映射（防UX-023/WEB-017）
+
+**禁止直接显示ID**，必须使用映射：
+
+| 字段类型 | 禁止显示 | 必须显示 | 映射来源 |
+|:---|:---|:---|:---|
+| 卖家ID | `15` | `张大千艺术工作室` | `t_user.username` |
+| 买家ID | `10086` | `藏***家`（脱敏） | `t_user.username` |
+| 藏品分类ID | `3` | `中国书画` | `t_category.category_name` |
+| 订单状态码 | `0` | `待付款` | 字典映射 |
+| 支付方式 | `WECHAT` | `微信支付` | 字典映射 |
+
+**Vue过滤器/组合式函数**：
+```typescript
+// utils/mappers.ts
+export const useMappers = () => {
+  // 用户名称映射（带缓存）
+  const userNameMap = ref<Map<number, string>>(new Map())
+  
+  const getUserName = async (userId: number) => {
+    if (userNameMap.value.has(userId)) {
+      return userNameMap.value.get(userId)
+    }
+    const user = await userApi.getById(userId)
+    const name = maskUsername(user.username)  // 脱敏
+    userNameMap.value.set(userId, name)
+    return name
+  }
+  
+  // 藏品分类映射
+  const categoryMap = ref<Map<number, string>>(new Map())
+  
+  const getCategoryName = (categoryId: number) => {
+    return categoryMap.value.get(categoryId) || '未知分类'
+  }
+  
+  // 状态中文映射（本地枚举）
+  const statusMap: Record<string, string> = {
+    'PENDING_PAY': '待付款',
+    'PAID': '已付款',
+    'SHIPPED': '已发货',
+    'COMPLETED': '已完成',
+    'CANCELLED': '已取消'
+  }
+  
+  const getStatusText = (code: string) => statusMap[code] || code
+  
+  return { getUserName, getCategoryName, getStatusText }
+}
+```
+
+### 5.2 金额格式化规范（防显示异常）
+
+**显示格式**：`¥999,999.00`（千分位+2位小数）
+
+```typescript
+// utils/formatters.ts
+export const formatAmount = (amount: number | string | undefined): string => {
+  if (amount === undefined || amount === null) return '¥0.00'
+  const num = typeof amount === 'string' ? parseFloat(amount) : amount
+  return '¥' + num.toLocaleString('zh-CN', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  })
+}
+
+// 使用示例
+formatAmount(128000)      // ¥128,000.00
+formatAmount(128000.5)    // ¥128,000.50
+formatAmount(undefined)   // ¥0.00
+```
+
+**Vue组件中使用**：
+```vue
+<template>
+  <!-- ✅ 正确：格式化显示 -->
+  <span class="price font-mono">{{ formatAmount(artwork.currentPrice) }}</span>
+  
+  <!-- ✅ 正确：竞拍价格动态更新 -->
+  <span class="auction-price font-mono" :class="{ 'up': priceChanged }">
+    {{ formatAmount(currentPrice) }}
+  </span>
+</template>
+```
+
+### 5.3 状态中文映射表（防WEB-018/FIX-166）
+
+**所有状态字段必须走此映射**，禁止直接输出英文/数字：
+
+```typescript
+// constants/status.ts
+
+// 藏品状态
+export const ArtworkStatusMap: Record<number, string> = {
+  0: '草稿',
+  1: '待审核',
+  2: '审核通过',
+  3: '审核驳回',
+  4: '已上架',
+  5: '已售出',
+  6: '已下架',
+  7: '流拍'
+}
+
+// 订单状态
+export const OrderStatusMap: Record<number, string> = {
+  0: '待付款',
+  1: '已付款待鉴定',
+  2: '鉴定中',
+  3: '待发货',
+  4: '已发货',
+  5: '已收货',
+  6: '已完成',
+  7: '已取消',
+  8: '退款中',
+  9: '已退款'
+}
+
+// 竞拍状态
+export const AuctionStatusMap: Record<string, string> = {
+  'PENDING': '待开始',
+  'ACTIVE': '进行中',
+  'EXTENDED': '延时中',
+  'FINISHED': '已结束',
+  'CANCELLED': '已取消'
+}
+
+// 通用状态标签组件
+export const StatusTag = ({ status, type }: { status: number | string, type: 'artwork' | 'order' | 'auction' }) => {
+  const map = {
+    artwork: ArtworkStatusMap,
+    order: OrderStatusMap,
+    auction: AuctionStatusMap
+  }[type]
+  
+  const text = map[status] || '未知'
+  const typeClass = getStatusTypeClass(status)  // 颜色映射
+  
+  return <span class={`tag ${typeClass}`}>{text}</span>
+}
+```
+
+---
+
+## 6. 故障排查速查手册
+
+### 6.1 常见启动错误
+
+| 错误现象 | 快速诊断 | 解决方案 |
+|:---|:---|:---|
+| `SAXParseException: 元素内容必须由格式正确的字符数据或标记组成` | XML中有未转义的`<` `>` | 执行2.2节检查命令，替换为`&lt;` `&gt;`或CDATA |
+| `Error creating bean with name 'dataSource'` | 数据库连接失败 | 检查MySQL端口/密码，确认`characterEncoding=utf8` |
+| `Web server failed to start. Port 8001 was already in use` | 端口占用 | 执行1.3节命令，释放端口或修改`application.yml` |
+| `Failed to configure a DataSource: 'url' attribute is not specified` | 配置文件未加载 | 确认`application.yml`在`resources`根目录 |
+| `Cannot find class: com.mysql.cj.jdbc.Driver` | 驱动依赖缺失 | `pom.xml`添加`mysql-connector-java`依赖 |
+
+### 6.2 运行时错误
+
+| 错误现象 | 快速诊断 | 解决方案 |
+|:---|:---|:---|
+| 403 Forbidden | 权限未配置 | 检查`@PreAuthorize`注解，确认权限矩阵匹配 |
+| 竞拍出价不实时更新 | WebSocket断开 | 检查Redis运行状态，确认端口6379 |
+| 金额计算精度错误 | 使用`double`而非`BigDecimal` | 全局替换为`BigDecimal`，比较用`compareTo` |
+| 中文乱码 | 编码不一致 | 检查IDE/File Encoding是否为UTF-8 |
+| 图片上传失败 | OSS配置错误 | 检查阿里云OSS密钥/_bucket_名称 |
+
+### 6.3 调试命令集
+
+```powershell
+# === 后端调试 ===
+# 1. 查看SpringBoot日志
+tail -f logs/artwork-user.log | grep ERROR
+
+# 2. 检查MySQL连接
+mysql -h localhost -u root -p -e "SHOW PROCESSLIST;"
+
+# 3. 检查Redis键值
+redis-cli KEYS "auction:*"
+redis-cli HGETALL "auction:artwork:1001"
+
+# === 前端调试 ===
+# 1. 清除Vite缓存
+rm -rf node_modules/.vite
+
+# 2. 重新安装依赖
+npm ci  # 使用ci而非install，锁定版本
+
+# 3. 检查TypeScript错误
+npx vue-tsc --noEmit
+```
+
+---
+
+## 7. 开发自测Checklist
+
+### 7.1 后端开发完成前检查
+
+- [ ] **所有Mapper XML已通过rg检查无未转义符号**（执行2.2节命令）
+- [ ] **所有接口已标注`@PreAuthorize`或纳入权限矩阵**
+- [ ] **所有金额字段使用`BigDecimal`，比较用`compareTo`**
+- [ ] **所有状态流转使用`StatusService.transition()`方法**
+- [ ] **所有支付相关操作已做幂等性校验**（Redis+DB唯一索引）
+- [ ] **所有敏感数据已加密存储**（身份证/银行卡AES加密）
+- [ ] **所有删除操作改为逻辑删除**（`deleted`字段软删）
+
+### 7.2 前端开发完成前检查
+
+- [ ] **弹窗打开调用`reset()`，关闭调用`cleanup()`**
+- [ ] **所有列表ID字段已映射为名称**（员工/客户/用户/分类）
+- [ ] **所有金额显示已格式化**（2位小数+千分位+¥符号）
+- [ ] **所有状态显示为中文**（非英文/数字，使用StatusTag组件）
+- [ ] **WebSocket断线重连后请求全量状态同步**
+- [ ] **所有表单输入已做防抖/节流处理**
+- [ ] **移动端已测试375px/414px/768px三种宽度**
+
+### 7.3 联调测试检查
+
+- [ ] **竞拍流程：缴纳保证金→出价→被超越提醒→成交→支付尾款**
+- [ ] **权限测试：买家不能访问卖家接口，卖家不能访问admin接口**
+- [ ] **并发测试：多窗口同时出价，验证分布式锁有效性**
+- [ ] **异常测试：断网恢复后数据一致性校验**
+
+---
+
+## 8. 附录：客栈系统错误对照
+
+| 客栈错误编号 | 客栈错误描述 | 本SOP防护措施 |
+|:---|:---|:---|
+| ENC-089 | 编码错误导致中文乱码 | 1.2节强制UTF-8设置 |
+| WEB-004/005 | XML特殊字符导致SAXParseException | 2.1节转义规范+2.2节检查命令 |
+| AUTH-054~058 | 权限403/菜单不显示/角色混乱 | 3.1节权限注解+3.2节检查清单 |
+| UX-023/WEB-017 | 显示ID而非名称 | 5.1节ID转名称强制映射 |
+| DATA-044/JAVA-048 | 金额计算/显示错误 | 2.4节BigDecimal规范+5.2节格式化 |
+| WEB-018/FIX-166 | 状态显示英文/数字 | 5.3节状态中文映射表 |
+
+---
+
+**文档结束**
+
+> 本SOP与《权限矩阵明细表》《数据库设计文档》《UI设计说明》《详细设计说明书》配套使用，确保艺术品拍卖系统不会出现客栈管理系统的权限混乱、数据越权、XML解析错误等问题。
