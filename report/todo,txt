@@ -1,0 +1,48 @@
+﻿
+根据【【✅️JeecgBoot校园问答系统改造完整指南】.md】和开题报告来快速完整的完整这个项目，
+【错误记录 | 2026-02-21】
+- 步骤: 第三步 JeecgBoot集成DeepSeek模型
+- 现象: 构建 jeecg-boot-module-airag 失败，maven-jar-plugin 报错: Error assembling JAR: org\\jeecg\\modules\\airag\\app\\consts not found
+- 可能原因: airag 模块编译输出缺失或打包路径异常
+- 处理建议: 先执行 mvn -pl :jeecg-boot-module-airag -am -DskipTests clean package，如仍失败检查 jeecg-boot\\jeecg-boot-module\\jeecg-boot-module-airag\\target\\classes\\org\\jeecg\\modules\\airag\\app\\consts 是否存在
+
+【构建记录 | 2026-02-21】
+- 命令: mvn -DskipTests install
+- 结果: BUILD SUCCESS (无错误，仅有过时/unchecked 编译警告)
+- 命令: mvn -pl :jeecg-boot-module-airag -am -DskipTests clean package
+- 结果: BUILD SUCCESS (无错误，仅有过时/unchecked 编译警告)
+
+【错误记录 | 2026-02-21】
+- 场景: jeecgboot-vue3 本地开发启动
+- 命令: pnpm run dev
+- 错误: ReferenceError: File is not defined (undici@7.22.0)
+- 环境: Node v18.20.2
+- 处理: 在 package.json 添加 pnpm.overrides 强制 undici=6.21.0，并执行 pnpm install 更新锁文件
+- 结果: 依赖已降级，建议重新执行 pnpm run dev 验证
+
+【构建记录 | 2026-02-21】
+- 构建记录: mvn -pl :jeecg-boot-module-airag -am -DskipTests clean package
+- 结果: BUILD SUCCESS (无错误，仅有过时/unchecked 警告)
+- 说明: airag 模块 JAR 组装正常
+- 配置: application-dev.yml 增加 campusqa.rag 默认配置 (enabled=false, topK=3, minScore=0.0, mode=keyword)
+
+
+【错误记录 | 2026-02-21】
+- 场景: mvn -pl :jeecg-boot-module-campusqa -am -DskipTests package
+- 错误: 多个 Java 文件含 UTF-8 BOM 导致 “非法字符 \ufeff”，并出现 Lombok getter/setter 缺失、@IgnoreAuth 用在类上不合法
+- 处理: 批量去除 BOM；campusqa 模块 POM 增加 lombok 依赖；@IgnoreAuth 调整为方法级
+- 结果: mvn -pl :jeecg-boot-module-campusqa -am -DskipTests package BUILD SUCCESS
+
+【进展记录 | 2026-02-21】
+- 前端: 新增 jeecgboot-vue3/src/views/campusqa 下的管理页面(knowledge/notice/guide/category/feedback)
+- 后端: application-dev.yml 增加 campusqa.rag 默认配置
+
+【进展记录 | 2026-02-21】
+- 后端: 重新安装 jeecg-system-biz 以包含 campusqa 模块依赖（mvn -pl jeecg-module-system/jeecg-system-biz -am -DskipTests install）
+- 后端: system-start 启动成功，8080 已监听
+- 前端: dev 服务启动成功，3100 已监听
+- 接口: /jeecg-boot/campusqa/mini/knowledge/search 返回 200
+
+
+
+阅读这个系统自带的SQL文件，jeecgboot-mysql-5.7.sql，看你你给的菜单SQL文件campusqa-menu.sql，是不是SQL文件的原因？？？还是不显示校园问答的菜单，还是说我的mysql8,zhge

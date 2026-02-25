@@ -1,0 +1,61 @@
+﻿{
+    "backendStartedAfterSeconds":  12,
+    "login":  {
+                  "success":  true,
+                  "code":  200,
+                  "message":  "",
+                  "tokenPrefix":  "eyJhbGciOiJIUzI1"
+              },
+    "miniAsk":  {
+                    "success":  true,
+                    "code":  200,
+                    "intentType":  "GENERAL",
+                    "intentLabel":  "ç»¼åå¨è¯¢",
+                    "intentScore":  0.2,
+                    "matchedKeywords":  "",
+                    "sourceType":  null
+                },
+    "overview":  {
+                     "success":  true,
+                     "code":  200,
+                     "result":  {
+                                    "knowledgeTotal":  2,
+                                    "knowledgeEnabled":  2,
+                                    "noticeTotal":  0,
+                                    "noticePublished":  0,
+                                    "feedbackTotal":  0,
+                                    "feedbackHandled":  0,
+                                    "feedbackHandledRate":  0.0,
+                                    "historyTotal":  2,
+                                    "historyToday":  2,
+                                    "askTotal":  2
+                                }
+                 },
+    "topQuestions":  {
+                         "success":  true,
+                         "code":  200,
+                         "count":  2,
+                         "first":  [
+                                       {
+                                           "id":  "CQA_KNOW_001",
+                                           "question":  "å¦ä½æ¥çè¯¾è¡¨ï¼",
+                                           "hits":  0,
+                                           "status":  "enable",
+                                           "hotFlag":  1,
+                                           "updateTime":  "2026-02-21 17:23:33"
+                                       }
+                                   ]
+                     },
+    "intentStats":  {
+                        "success":  true,
+                        "code":  200,
+                        "count":  1,
+                        "top3":  [
+                                     {
+                                         "intentType":  "GENERAL",
+                                         "intentLabel":  "ç»¼åå¨è¯¢",
+                                         "count":  2
+                                     }
+                                 ]
+                    }
+}

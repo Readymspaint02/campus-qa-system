@@ -1,0 +1,575 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.jeecgframework.boot:jeecg-system-start >-------------
+[INFO] Building jeecg-system-start 3.8.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.7.18:run (default-cli) > test-compile @ jeecg-system-start >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ jeecg-system-start ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 23 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ jeecg-system-start ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ jeecg-system-start ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ jeecg-system-start ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.7.18:run (default-cli) < test-compile @ jeecg-system-start <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.7.18:run (default-cli) @ jeecg-system-start ---
+[INFO] Attaching agents: []
+11:44:55.468 [main] INFO org.jeecg.JeecgSystemApplication - [JEECG] Elasticsearch Health Check Enabled: false
+
+   (_)                          | |               | |
+    _  ___  ___  ___ __ _ ______| |__   ___   ___ | |_ 
+   | |/ _ \/ _ \/ __/ _` |______| '_ \ / _ \ / _ \| __|
+   | |  __/  __/ (_| (_| |      | |_) | (_) | (_) | |_ 
+   | |\___|\___|\___\__, |      |_.__/ \___/ \___/ \__|
+  _/ |               __/ |                             
+ |__/               |___/
+
+
+
+Jeecg  Boot Version: 3.8.3
+Spring Boot Version: 2.7.18 (v2.7.18)
+²úÆ·¹ÙÍø£º www.jeecg.com
+°æÈ¨ËùÊô£º ±±¾©¹ú¾æÐÅÏ¢¼¼ÊõÓÐÏÞ¹«Ë¾
+¹«Ë¾¹ÙÍø£º www.guojusoft.com
+
+
+2026-02-22 11:44:55.952 [background-preinit] [34mINFO [0;39m [36morg.hibernate.validator.internal.util.Version:21[0;39m - HV000001: Hibernate Validator 6.2.5.Final
+2026-02-22 11:44:55.978 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:55[0;39m - Starting JeecgSystemApplication using Java 17.0.4.1 on DESKTOP-11031IA with PID 24448 (D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes started by 35004 in D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start)
+2026-02-22 11:44:55.979 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:638[0;39m - The following 1 profile is active: "dev"
+2026-02-22 11:44:57.811 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:262[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-22 11:44:57.813 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:132[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-22 11:44:57.891 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:201[0;39m - Finished Spring Data repository scanning in 62 ms. Found 0 Redis repository interfaces.
+2026-02-22 11:44:57.994 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:23[0;39m -  ******************* init miniDao config [ begin ] *********************** 
+2026-02-22 11:44:57.995 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:26[0;39m -  ------ minidao.base-package ------- org.jeecg.modules.jmreport.*,org.jeecg.modules.drag.*
+2026-02-22 11:44:57.996 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:50[0;39m -  *******************  init miniDao config  [ end ] *********************** 
+2026-02-22 11:44:58.514 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportCategoryDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDataSourceDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbFieldDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbParamDao }
+2026-02-22 11:44:58.516 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictDao }
+2026-02-22 11:44:58.517 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictItemDao }
+2026-02-22 11:44:58.517 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportExportJobDao }
+2026-02-22 11:44:58.517 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportExportLogDao }
+2026-02-22 11:44:58.517 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportLinkDao }
+2026-02-22 11:44:58.518 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportMapDao }
+2026-02-22 11:44:58.518 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportShareDao }
+2026-02-22 11:44:58.518 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuDragCategoryDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuDragMapDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuReportIconLibDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragCompDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetHeadDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetItemDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetParamDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDataSourceDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageCompDao }
+2026-02-22 11:44:58.519 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageDao }
+2026-02-22 11:44:58.520 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragShareDao }
+2026-02-22 11:44:58.522 [main] [34mINFO [0;39m [36mo.s.c.annotation.ConfigurationClassPostProcessor:426[0;39m - Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2026-02-22 11:44:58.767 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.769 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.782 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.784 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.787 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'management.metrics.export.prometheus-org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.788 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'prometheusConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusPropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.790 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'collectorRegistry' of type [io.prometheus.client.CollectorRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.791 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.792 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.802 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'prometheusMeterRegistry' of type [io.micrometer.prometheus.PrometheusMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.804 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'micrometerOptions' of type [io.lettuce.core.metrics.MicrometerOptions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.804 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'lettuceMetrics' of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration$$Lambda$590/0x0000000801299a40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:58.970 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.054 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.058 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'jeecgBaseConfig' of type [org.jeecg.config.JeecgBaseConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.060 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$b853b969] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.446 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.455 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration$$EnhancerBySpringCGLIB$$da8928c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.471 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.515 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.616 [main] [34mINFO [0;39m [36morg.jeecg.config.shiro.ShiroConfig:327[0;39m - ===============(1)´´½¨»º´æ¹ÜÀíÆ÷RedisCacheManager
+2026-02-22 11:44:59.618 [main] [34mINFO [0;39m [36morg.jeecg.config.shiro.ShiroConfig:348[0;39m - ===============(2)´´½¨RedisManager,Á¬½ÓRedis..
+2026-02-22 11:44:59.621 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.630 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'rememberMeManager' of type [org.apache.shiro.web.mgt.CookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.635 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.652 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.666 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$1f8949ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.675 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.681 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.684 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.689 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.695 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$6c304f20] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.698 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:44:59.996 [main] [34mINFO [0;39m [36mo.s.boot.web.embedded.tomcat.TomcatWebServer:108[0;39m - Tomcat initialized with port(s): 18080 (http)
+2026-02-22 11:45:00.012 [main] [34mINFO [0;39m [36morg.apache.coyote.http11.Http11NioProtocol:173[0;39m - Initializing ProtocolHandler ["http-nio-18080"]
+2026-02-22 11:45:00.015 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+2026-02-22 11:45:00.015 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-02-22 11:45:00.153 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173[0;39m - Initializing Spring embedded WebApplicationContext
+2026-02-22 11:45:00.153 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext:292[0;39m - Root WebApplicationContext: initialization completed in 3974 ms
+2026-02-22 11:45:00.472 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardContext:173[0;39m - Suspicious URL pattern: [/airag/chat/receive/**] in context [/jeecg-boot], see sections 12.1 and 12.2 of the Servlet specification
+2026-02-22 11:45:01.067 [main] [34mINFO [0;39m [36mcom.alibaba.druid.pool.DruidDataSource:673[0;39m - {dataSource-1,master} inited
+2026-02-22 11:45:01.069 [main] [34mINFO [0;39m [36mc.b.dynamic.datasource.DynamicRoutingDataSource:154[0;39m - dynamic-datasource - add a datasource named [master] success
+2026-02-22 11:45:01.070 [main] [34mINFO [0;39m [36mc.b.dynamic.datasource.DynamicRoutingDataSource:237[0;39m - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2026-02-22 11:45:01.105 [main] [34mINFO [0;39m [36morg.jeecg.config.mybatis.MybatisPlusSaasConfig:138[0;39m - µ±Ç°Êý¾Ý¿âÀàÐÍ: MYSQL
+2026-02-22 11:45:03.146 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Scanning for classpath resources at 'classpath:db/callback' ...
+2026-02-22 11:45:03.146 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e ...
+2026-02-22 11:45:03.147 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Unable to resolve location classpath:db/callback.
+2026-02-22 11:45:03.147 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - AWS SDK available: false
+2026-02-22 11:45:03.147 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Google Cloud Storage available: false
+2026-02-22 11:45:03.147 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning for classpath resources at 'classpath:flyway/sql/mysql' ...
+2026-02-22 11:45:03.148 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Determining location urls for classpath:flyway/sql/mysql using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e ...
+2026-02-22 11:45:03.149 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning URL: file:/D:/desk02/todo_26/codex/zhou_zhen/campus-qa-system/jeecg-boot/jeecg-module-system/jeecg-system-start/target/classes/flyway/sql/mysql
+2026-02-22 11:45:03.151 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - JBoss VFS v2 available: false
+2026-02-22 11:45:03.152 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning starting at classpath root in filesystem: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\
+2026-02-22 11:45:03.153 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning for resources in path: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\flyway\sql\mysql (flyway/sql/mysql)
+2026-02-22 11:45:03.153 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning for resources in path: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\flyway\sql\mysql\backup (flyway/sql/mysql)
+2026-02-22 11:45:03.155 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/README.md
+2026-02-22 11:45:03.155 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md
+2026-02-22 11:45:03.156 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_1__airag_add_menu.sql
+2026-02-22 11:45:03.156 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_2__airag_init_db.sql
+2026-02-22 11:45:03.156 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.1_1__all_upgrade.sql
+2026-02-22 11:45:03.157 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.1_2__openapi.sql
+2026-02-22 11:45:03.157 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.2_1__all_upgrade.sql
+2026-02-22 11:45:03.158 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.3_0__all_upgrade.sql
+2026-02-22 11:45:03.158 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/backup/V20250403.zip
+2026-02-22 11:45:03.158 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning for classes at classpath:flyway/sql/mysql
+2026-02-22 11:45:03.415 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.license.VersionPrinter:44[0;39m - Flyway Community Edition 7.15.0 by Redgate
+2026-02-22 11:45:03.416 [main] [34mINFO [0;39m [36mo.f.core.internal.database.base.BaseDatabaseType:44[0;39m - Database: jdbc:mysql://127.0.0.1:3306/jeecg-boot (MySQL 8.0)
+2026-02-22 11:45:03.417 [main] [39mDEBUG[0;39m [36mo.f.core.internal.database.base.BaseDatabaseType:40[0;39m - Driver  : MySQL Connector/J mysql-connector-java-8.0.27 (Revision: e920b979015ae7117d60d72bcc8f077a839cd791)
+2026-02-22 11:45:03.485 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.Flyway:40[0;39m - DDL Transactions Supported: false
+2026-02-22 11:45:03.487 [main] [39mDEBUG[0;39m [36mo.f.c.internal.schemahistory.SchemaHistoryFactory:40[0;39m - Schemas: 
+2026-02-22 11:45:03.488 [main] [39mDEBUG[0;39m [36mo.f.c.internal.schemahistory.SchemaHistoryFactory:40[0;39m - Default schema: null
+2026-02-22 11:45:03.508 [main] [39mDEBUG[0;39m [36mo.f.c.internal.callback.SqlScriptCallbackFactory:40[0;39m - Scanning for SQL callbacks ...
+2026-02-22 11:45:03.509 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:45:03.509 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:45:03.509 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:45:03.547 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.command.DbValidate:40[0;39m - Validating migrations ...
+2026-02-22 11:45:03.551 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:45:03.551 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:45:03.552 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.1_1__all_upgrade.sql (filename: V3.8.1_1__all_upgrade.sql)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.1_2__openapi.sql (filename: V3.8.1_2__openapi.sql)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_2__airag_init_db.sql (filename: V3.8.0_2__airag_init_db.sql)
+2026-02-22 11:45:03.572 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:45:03.573 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.2_1__all_upgrade.sql (filename: V3.8.2_1__all_upgrade.sql)
+2026-02-22 11:45:03.573 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_1__airag_add_menu.sql (filename: V3.8.0_1__airag_add_menu.sql)
+2026-02-22 11:45:03.573 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.3_0__all_upgrade.sql (filename: V3.8.3_0__all_upgrade.sql)
+2026-02-22 11:45:03.635 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbValidate:44[0;39m - Successfully validated 7 migrations (execution time 00:00.086s)
+2026-02-22 11:45:03.647 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbMigrate:44[0;39m - Current version of schema `jeecg-boot`: 3.8.3.0
+2026-02-22 11:45:03.650 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbMigrate:44[0;39m - Schema `jeecg-boot` is up to date. No migration necessary.
+2026-02-22 11:45:03.653 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.Flyway:40[0;39m - Memory usage: 88 of 210M
+2026-02-22 11:45:03.654 [main] [34mINFO [0;39m [36morg.jeecg.config.flyway.FlywayConfig:127[0;39m - ¡¾Êý¾Ý¿âÉý¼¶¡¿Æ½Ì¨¼¯³ÉÁËMySQL¿âµÄFlyway£¬Êý¾Ý¿â°æ±¾×Ô¶¯Éý¼¶! 
+2026-02-22 11:45:03.738 [main] [34mINFO [0;39m [36morg.jeecg.common.modules.redis.config.RedisConfig:60[0;39m -  --- redis config init --- 
+2026-02-22 11:45:06.168 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1220[0;39m - Using default implementation for ThreadExecutor
+2026-02-22 11:45:06.172 [main] [34mINFO [0;39m [36morg.quartz.simpl.SimpleThreadPool:268[0;39m - Job execution threads will use class loader of thread: main
+2026-02-22 11:45:06.180 [main] [34mINFO [0;39m [36morg.quartz.core.SchedulerSignalerImpl:61[0;39m - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-02-22 11:45:06.181 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:229[0;39m - Quartz Scheduler v.2.3.2 created.
+2026-02-22 11:45:06.184 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:672[0;39m - Using db table-based data access locking (synchronization).
+2026-02-22 11:45:06.186 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:145[0;39m - JobStoreCMT initialized.
+2026-02-22 11:45:06.186 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:294[0;39m - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'DESKTOP-11031IA1771731906171'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2026-02-22 11:45:06.187 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1374[0;39m - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2026-02-22 11:45:06.187 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1378[0;39m - Quartz scheduler version: 2.3.2
+2026-02-22 11:45:06.187 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:2293[0;39m - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6a4899c
+2026-02-22 11:45:08.571 [main] [34mINFO [0;39m [36mc.y.l.process.impl.CmpAroundAspectBeanProcess:32[0;39m - component aspect implement[nodeProcessAspect] has been found
+2026-02-22 11:45:08.871 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[classifier] has been found
+2026-02-22 11:45:08.879 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[end] has been found
+2026-02-22 11:45:08.886 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[http] has been found
+2026-02-22 11:45:08.891 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[knowledge] has been found
+2026-02-22 11:45:08.899 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[llm] has been found
+2026-02-22 11:45:08.904 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[enhanceJava] has been found
+2026-02-22 11:45:08.908 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[reply] has been found
+2026-02-22 11:45:08.914 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[start] has been found
+2026-02-22 11:45:08.919 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[subflow] has been found
+2026-02-22 11:45:08.924 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[switch] has been found
+2026-02-22 11:45:11.392 [main] [34mINFO [0;39m [36mo.j.config.shiro.ignore.IgnoreAuthPostProcessor:41[0;39m - Init Token ignoreAuthUrls Config [ ¼¯ºÏ ]  £º[/airag/app/queryById, /campusqa/mini/knowledge/search, /campusqa/mini/knowledge/detail, /campusqa/mini/history, /campusqa/mini/feedback, /campusqa/mini/ask, /campusqa/mini/notice/list, /campusqa/mini/guide/list, /campusqa/mini/favorite/list, /campusqa/mini/favorite/toggle, /campusqa/mini/history/list, /campusqa/mini/subscribe/toggle, /campusqa/mini/subscribe/list, /test/jeecgDemo/html, /airag/flow/run, /airag/flow/run/*, /openapi/demo/index, /airag/chat/stop/*, /airag/chat/send, /airag/chat/upload, /airag/chat/conversation/update/title, /airag/chat/conversations, /airag/chat/conversation/*, /airag/chat/messages, /airag/chat/init, /airag/chat/receive/*, /airag/chat/messages/clear/*]
+2026-02-22 11:45:11.395 [main] [34mINFO [0;39m [36mo.j.config.shiro.ignore.IgnoreAuthPostProcessor:49[0;39m - Init Token ignoreAuthUrls Config [ ºÄÊ± ] £º4ºÁÃë
+2026-02-22 11:45:11.418 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeGenerateDbConfig:50[0;39m -  Init CodeGenerate Config [ Get Db Config From application.yml ] 
+2026-02-22 11:45:11.871 [main] [34mINFO [0;39m [36mc.b.m.e.spring.MybatisPlusApplicationContextAware:40[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d
+2026-02-22 11:45:12.592 [main] [34mINFO [0;39m [36mo.s.b.actuate.endpoint.web.EndpointLinksResolver:58[0;39m - Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-02-22 11:45:12.780 [main] [34mINFO [0;39m [36mc.y.liteflow.parser.factory.FlowParserProvider:193[0;39m - flow info loaded from class config with el,class=com.yomahub.liteflow.parser.sql.SQLXmlELParser
+2026-02-22 11:45:12.813 [main] [34mINFO [0;39m [36mc.yomahub.liteflow.parser.sql.read.AbstractSqlRead:186[0;39m - query sql: select id, application_name, chain from airag_flow where status = 'enable' and chain is not null
+2026-02-22 11:45:12.825 [main] [34mINFO [0;39m [36mc.y.l.p.s.d.impl.LiteFlowAutoLookUpJdbcConn:72[0;39m - use dataSourceName[dataSource],has found liteflow config
+2026-02-22 11:45:13.061 [main] [34mINFO [0;39m [36morg.apache.coyote.http11.Http11NioProtocol:173[0;39m - Starting ProtocolHandler ["http-nio-18080"]
+2026-02-22 11:45:13.077 [main] [34mINFO [0;39m [36mo.s.boot.web.embedded.tomcat.TomcatWebServer:220[0;39m - Tomcat started on port(s): 18080 (http) with context path '/jeecg-boot'
+2026-02-22 11:45:13.465 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.SchedulerFactoryBean:734[0;39m - Will start Quartz Scheduler [MyScheduler] in 1 seconds
+2026-02-22 11:45:13.483 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:61[0;39m - Started JeecgSystemApplication in 18.013 seconds (JVM running for 18.447)
+2026-02-22 11:45:13.490 [main] [34mINFO [0;39m [36morg.jeecg.config.init.ShiroCacheClearRunner:26[0;39m - ¡ª¡ª¡ª Service restart, clearing all user shiro authorization cache ¡ª¡ª¡ª 
+2026-02-22 11:45:13.529 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeTemplateInitListener:30[0;39m -  Init Code Generate Template [ ¼ì²âÈç¹ûÊÇJARÆô¶¯£¬CopyÄ£°åµ½configÄ¿Â¼ ] 
+2026-02-22 11:45:13.533 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeTemplateInitListener:33[0;39m -  Init Code Generate Template completed in 4 ms
+2026-02-22 11:45:13.556 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:41[0;39m - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:18080/jeecg-boot
+	External: 	http://169.254.15.153:18080/jeecg-boot/doc.html
+	SwaggerÎÄµµ: 	http://169.254.15.153:18080/jeecg-boot/doc.html
+----------------------------------------------------------
+2026-02-22 11:45:14.467 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.SchedulerFactoryBean:750[0;39m - Starting Quartz Scheduler now, after delay of 1 seconds
+2026-02-22 11:45:14.631 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:3644[0;39m - ClusterManager: detected 1 failed or restarted instances.
+2026-02-22 11:45:14.632 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:3503[0;39m - ClusterManager: Scanning for instance "DESKTOP-11031IA1771730186475"'s failed in-progress jobs.
+2026-02-22 11:45:14.642 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:547[0;39m - Scheduler MyScheduler_$_DESKTOP-11031IA1771731906171 started.
+2026-02-22 11:45:32.918 [http-nio-18080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-22 11:45:32.918 [http-nio-18080-exec-1] [34mINFO [0;39m [36morg.springframework.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+2026-02-22 11:45:32.921 [http-nio-18080-exec-1] [34mINFO [0;39m [36morg.springframework.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 2 ms
+2026-02-22 11:45:33.007 [http-nio-18080-exec-1] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16faul5s£¬checkCode = Ul5S
+2026-02-22 11:45:34.260 [http-nio-18080-exec-2] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16favref£¬checkCode = VRef
+2026-02-22 11:45:34.883 [http-nio-18080-exec-3] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fatqpy£¬checkCode = TqPy
+2026-02-22 11:45:35.514 [http-nio-18080-exec-4] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fazll8£¬checkCode = ZLL8
+2026-02-22 11:45:36.142 [http-nio-18080-exec-7] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fa3uae£¬checkCode = 3uae
+2026-02-22 11:46:22.563 [http-nio-18080-exec-8] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:46:22.566 [http-nio-18080-exec-8] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:46:22.578 [http-nio-18080-exec-8] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fasnmm£¬checkCode = SNmM
+2026-02-22 11:46:23.163 [http-nio-18080-exec-5] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:46:23.164 [http-nio-18080-exec-5] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:46:23.169 [http-nio-18080-exec-5] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fakf06£¬checkCode = KF06
+2026-02-22 11:46:23.702 [http-nio-18080-exec-9] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:46:23.703 [http-nio-18080-exec-9] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:46:23.709 [http-nio-18080-exec-9] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16falqjz£¬checkCode = lqJZ
+2026-02-22 11:46:24.241 [http-nio-18080-exec-10] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:46:24.242 [http-nio-18080-exec-10] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:46:24.254 [http-nio-18080-exec-10] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16faa5ff£¬checkCode = a5fF
+2026-02-22 11:46:24.779 [http-nio-18080-exec-1] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:46:24.779 [http-nio-18080-exec-1] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:46:24.784 [http-nio-18080-exec-1] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fa1r0g£¬checkCode = 1R0G
+2026-02-22 11:47:01.292 [http-nio-18080-exec-3] [31mWARN [0;39m [36morg.apache.shiro.mgt.AbstractRememberMeManager:449[0;39m - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2026-02-22 11:47:01.293 [http-nio-18080-exec-3] [31mWARN [0;39m [36morg.apache.shiro.mgt.DefaultSecurityManager:618[0;39m - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to correctly extract the Initialization Vector or ciphertext.
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:378)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:613)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:501)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:347)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:300)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:367)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:154)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 16 out of bounds for byte[2]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:370)
+	... 45 common frames omitted
+2026-02-22 11:47:01.298 [http-nio-18080-exec-3] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16famyt3£¬checkCode = MyT3
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:11 min
+[INFO] Finished at: 2026-02-22T11:47:04+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.7.18:run (default-cli) on project jeecg-system-start: Application finished with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -1,0 +1,266 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------< org.jeecgframework.boot:jeecg-system-start >-------------
+[INFO] Building jeecg-system-start 3.8.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.7.18:run (default-cli) > test-compile @ jeecg-system-start >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ jeecg-system-start ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 23 resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ jeecg-system-start ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ jeecg-system-start ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ jeecg-system-start ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.7.18:run (default-cli) < test-compile @ jeecg-system-start <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.7.18:run (default-cli) @ jeecg-system-start ---
+[INFO] Attaching agents: []
+11:53:05.195 [main] INFO org.jeecg.JeecgSystemApplication - [JEECG] Elasticsearch Health Check Enabled: false
+
+   (_)                          | |               | |
+    _  ___  ___  ___ __ _ ______| |__   ___   ___ | |_ 
+   | |/ _ \/ _ \/ __/ _` |______| '_ \ / _ \ / _ \| __|
+   | |  __/  __/ (_| (_| |      | |_) | (_) | (_) | |_ 
+   | |\___|\___|\___\__, |      |_.__/ \___/ \___/ \__|
+  _/ |               __/ |                             
+ |__/               |___/
+
+
+
+Jeecg  Boot Version: 3.8.3
+Spring Boot Version: 2.7.18 (v2.7.18)
+²úÆ·¹ÙÍø£º www.jeecg.com
+°æÈ¨ËùÊô£º ±±¾©¹ú¾æÐÅÏ¢¼¼ÊõÓÐÏÞ¹«Ë¾
+¹«Ë¾¹ÙÍø£º www.guojusoft.com
+
+
+2026-02-22 11:53:05.642 [background-preinit] [34mINFO [0;39m [36morg.hibernate.validator.internal.util.Version:21[0;39m - HV000001: Hibernate Validator 6.2.5.Final
+2026-02-22 11:53:05.658 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:55[0;39m - Starting JeecgSystemApplication using Java 17.0.4.1 on DESKTOP-11031IA with PID 12312 (D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes started by 35004 in D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start)
+2026-02-22 11:53:05.659 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:638[0;39m - The following 1 profile is active: "dev"
+2026-02-22 11:53:07.347 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:262[0;39m - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-22 11:53:07.349 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:132[0;39m - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-22 11:53:07.422 [main] [34mINFO [0;39m [36mo.s.d.r.config.RepositoryConfigurationDelegate:201[0;39m - Finished Spring Data repository scanning in 61 ms. Found 0 Redis repository interfaces.
+2026-02-22 11:53:07.511 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:23[0;39m -  ******************* init miniDao config [ begin ] *********************** 
+2026-02-22 11:53:07.512 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:26[0;39m -  ------ minidao.base-package ------- org.jeecg.modules.jmreport.*,org.jeecg.modules.drag.*
+2026-02-22 11:53:07.512 [main] [34mINFO [0;39m [36mo.j.minidao.auto.MinidaoAutoConfiguration:50[0;39m -  *******************  init miniDao config  [ end ] *********************** 
+2026-02-22 11:53:07.983 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportCategoryDao }
+2026-02-22 11:53:07.984 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDao }
+2026-02-22 11:53:07.984 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDataSourceDao }
+2026-02-22 11:53:07.984 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbDao }
+2026-02-22 11:53:07.985 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbFieldDao }
+2026-02-22 11:53:07.985 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDbParamDao }
+2026-02-22 11:53:07.985 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictDao }
+2026-02-22 11:53:07.985 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportDictItemDao }
+2026-02-22 11:53:07.985 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportExportJobDao }
+2026-02-22 11:53:07.986 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportExportLogDao }
+2026-02-22 11:53:07.986 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportLinkDao }
+2026-02-22 11:53:07.986 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportMapDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.jmreport.desreport.dao.JimuReportShareDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuDragCategoryDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuDragMapDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.JimuReportIconLibDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragCompDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetHeadDao }
+2026-02-22 11:53:07.987 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetItemDao }
+2026-02-22 11:53:07.988 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDatasetParamDao }
+2026-02-22 11:53:07.988 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragDataSourceDao }
+2026-02-22 11:53:07.988 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageCompDao }
+2026-02-22 11:53:07.988 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragPageDao }
+2026-02-22 11:53:07.988 [main] [34mINFO [0;39m [36mo.j.minidao.factory.MiniDaoClassPathMapperScanner:55[0;39m - register minidao name is { org.jeecg.modules.drag.dao.OnlDragShareDao }
+2026-02-22 11:53:07.990 [main] [34mINFO [0;39m [36mo.s.c.annotation.ConfigurationClassPostProcessor:426[0;39m - Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2026-02-22 11:53:08.212 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.215 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.224 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.225 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusMetricsExportAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.228 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'management.metrics.export.prometheus-org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.228 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'prometheusConfig' of type [org.springframework.boot.actuate.autoconfigure.metrics.export.prometheus.PrometheusPropertiesConfigAdapter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.229 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'collectorRegistry' of type [io.prometheus.client.CollectorRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.230 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration' of type [org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.231 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'micrometerClock' of type [io.micrometer.core.instrument.Clock$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.243 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'prometheusMeterRegistry' of type [io.micrometer.prometheus.PrometheusMeterRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.244 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'micrometerOptions' of type [io.lettuce.core.metrics.MicrometerOptions] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.245 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'lettuceMetrics' of type [org.springframework.boot.actuate.autoconfigure.metrics.redis.LettuceMetricsAutoConfiguration$$Lambda$590/0x00000008012a3590] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.368 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.441 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.445 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'jeecgBaseConfig' of type [org.jeecg.config.JeecgBaseConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.448 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'shiroConfig' of type [org.jeecg.config.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$27223486] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.779 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.785 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAopConfiguration$$EnhancerBySpringCGLIB$$4957a3e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.795 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.829 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'shiroRealm' of type [org.jeecg.config.shiro.ShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.965 [main] [34mINFO [0;39m [36morg.jeecg.config.shiro.ShiroConfig:344[0;39m - ===============(1)´´½¨»º´æ¹ÜÀíÆ÷RedisCacheManager
+2026-02-22 11:53:08.967 [main] [34mINFO [0;39m [36morg.jeecg.config.shiro.ShiroConfig:365[0;39m - ===============(2)´´½¨RedisManager,Á¬½ÓRedis..
+2026-02-22 11:53:08.970 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'redisManager' of type [org.crazycake.shiro.RedisManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.978 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'rememberMeManager' of type [org.jeecg.config.shiro.SafeCookieRememberMeManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:08.983 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.003 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.018 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$8e57c509] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.025 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.033 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.035 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.040 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.047 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration' of type [org.apache.shiro.spring.boot.autoconfigure.ShiroBeanAutoConfiguration$$EnhancerBySpringCGLIB$$dafeca3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.051 [main] [34mINFO [0;39m [36mo.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:376[0;39m - Bean 'eventBus' of type [org.apache.shiro.event.support.DefaultEventBus] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-02-22 11:53:09.346 [main] [34mINFO [0;39m [36mo.s.boot.web.embedded.tomcat.TomcatWebServer:108[0;39m - Tomcat initialized with port(s): 18080 (http)
+2026-02-22 11:53:09.356 [main] [34mINFO [0;39m [36morg.apache.coyote.http11.Http11NioProtocol:173[0;39m - Initializing ProtocolHandler ["http-nio-18080"]
+2026-02-22 11:53:09.358 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardService:173[0;39m - Starting service [Tomcat]
+2026-02-22 11:53:09.358 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardEngine:173[0;39m - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2026-02-22 11:53:09.469 [main] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173[0;39m - Initializing Spring embedded WebApplicationContext
+2026-02-22 11:53:09.470 [main] [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext:292[0;39m - Root WebApplicationContext: initialization completed in 3650 ms
+2026-02-22 11:53:09.737 [main] [34mINFO [0;39m [36morg.apache.catalina.core.StandardContext:173[0;39m - Suspicious URL pattern: [/airag/chat/receive/**] in context [/jeecg-boot], see sections 12.1 and 12.2 of the Servlet specification
+2026-02-22 11:53:10.132 [main] [34mINFO [0;39m [36mcom.alibaba.druid.pool.DruidDataSource:673[0;39m - {dataSource-1,master} inited
+2026-02-22 11:53:10.133 [main] [34mINFO [0;39m [36mc.b.dynamic.datasource.DynamicRoutingDataSource:154[0;39m - dynamic-datasource - add a datasource named [master] success
+2026-02-22 11:53:10.133 [main] [34mINFO [0;39m [36mc.b.dynamic.datasource.DynamicRoutingDataSource:237[0;39m - dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2026-02-22 11:53:10.153 [main] [34mINFO [0;39m [36morg.jeecg.config.mybatis.MybatisPlusSaasConfig:138[0;39m - µ±Ç°Êý¾Ý¿âÀàÐÍ: MYSQL
+2026-02-22 11:53:11.388 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Scanning for classpath resources at 'classpath:db/callback' ...
+2026-02-22 11:53:11.389 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e ...
+2026-02-22 11:53:11.389 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Unable to resolve location classpath:db/callback.
+2026-02-22 11:53:11.389 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - AWS SDK available: false
+2026-02-22 11:53:11.389 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - Google Cloud Storage available: false
+2026-02-22 11:53:11.391 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning for classpath resources at 'classpath:flyway/sql/mysql' ...
+2026-02-22 11:53:11.391 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Determining location urls for classpath:flyway/sql/mysql using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@70dea4e ...
+2026-02-22 11:53:11.392 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning URL: file:/D:/desk02/todo_26/codex/zhou_zhen/campus-qa-system/jeecg-boot/jeecg-module-system/jeecg-system-start/target/classes/flyway/sql/mysql
+2026-02-22 11:53:11.393 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.util.FeatureDetector:40[0;39m - JBoss VFS v2 available: false
+2026-02-22 11:53:11.396 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning starting at classpath root in filesystem: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\
+2026-02-22 11:53:11.397 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning for resources in path: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\flyway\sql\mysql (flyway/sql/mysql)
+2026-02-22 11:53:11.398 [main] [39mDEBUG[0;39m [36mo.f.c.i.s.c.FileSystemClassPathLocationScanner:40[0;39m - Scanning for resources in path: D:\desk02\todo_26\codex\zhou_zhen\campus-qa-system\jeecg-boot\jeecg-module-system\jeecg-system-start\target\classes\flyway\sql\mysql\backup (flyway/sql/mysql)
+2026-02-22 11:53:11.400 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/README.md
+2026-02-22 11:53:11.400 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md
+2026-02-22 11:53:11.401 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_1__airag_add_menu.sql
+2026-02-22 11:53:11.401 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.0_2__airag_init_db.sql
+2026-02-22 11:53:11.401 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.1_1__all_upgrade.sql
+2026-02-22 11:53:11.402 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.1_2__openapi.sql
+2026-02-22 11:53:11.402 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.2_1__all_upgrade.sql
+2026-02-22 11:53:11.402 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/V3.8.3_0__all_upgrade.sql
+2026-02-22 11:53:11.402 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Found resource: flyway/sql/mysql/backup/V20250403.zip
+2026-02-22 11:53:11.403 [main] [39mDEBUG[0;39m [36mo.f.c.internal.scanner.classpath.ClassPathScanner:40[0;39m - Scanning for classes at classpath:flyway/sql/mysql
+2026-02-22 11:53:11.607 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.license.VersionPrinter:44[0;39m - Flyway Community Edition 7.15.0 by Redgate
+2026-02-22 11:53:11.608 [main] [34mINFO [0;39m [36mo.f.core.internal.database.base.BaseDatabaseType:44[0;39m - Database: jdbc:mysql://127.0.0.1:3306/jeecg-boot (MySQL 8.0)
+2026-02-22 11:53:11.608 [main] [39mDEBUG[0;39m [36mo.f.core.internal.database.base.BaseDatabaseType:40[0;39m - Driver  : MySQL Connector/J mysql-connector-java-8.0.27 (Revision: e920b979015ae7117d60d72bcc8f077a839cd791)
+2026-02-22 11:53:11.652 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.Flyway:40[0;39m - DDL Transactions Supported: false
+2026-02-22 11:53:11.655 [main] [39mDEBUG[0;39m [36mo.f.c.internal.schemahistory.SchemaHistoryFactory:40[0;39m - Schemas: 
+2026-02-22 11:53:11.655 [main] [39mDEBUG[0;39m [36mo.f.c.internal.schemahistory.SchemaHistoryFactory:40[0;39m - Default schema: null
+2026-02-22 11:53:11.667 [main] [39mDEBUG[0;39m [36mo.f.c.internal.callback.SqlScriptCallbackFactory:40[0;39m - Scanning for SQL callbacks ...
+2026-02-22 11:53:11.667 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:53:11.667 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:53:11.667 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:53:11.683 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.command.DbValidate:40[0;39m - Validating migrations ...
+2026-02-22 11:53:11.685 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:53:11.686 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:53:11.686 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:53:11.701 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/README.md (filename: README.md)
+2026-02-22 11:53:11.701 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.1_1__all_upgrade.sql (filename: V3.8.1_1__all_upgrade.sql)
+2026-02-22 11:53:11.701 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.1_2__openapi.sql (filename: V3.8.1_2__openapi.sql)
+2026-02-22 11:53:11.701 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_0__clear_flyway_sql.md (filename: V3.8.0_0__clear_flyway_sql.md)
+2026-02-22 11:53:11.702 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_2__airag_init_db.sql (filename: V3.8.0_2__airag_init_db.sql)
+2026-02-22 11:53:11.702 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/backup/V20250403.zip (filename: V20250403.zip)
+2026-02-22 11:53:11.702 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.2_1__all_upgrade.sql (filename: V3.8.2_1__all_upgrade.sql)
+2026-02-22 11:53:11.702 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.0_1__airag_add_menu.sql (filename: V3.8.0_1__airag_add_menu.sql)
+2026-02-22 11:53:11.703 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.internal.scanner.Scanner:40[0;39m - Filtering out resource: flyway/sql/mysql/V3.8.3_0__all_upgrade.sql (filename: V3.8.3_0__all_upgrade.sql)
+2026-02-22 11:53:11.728 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbValidate:44[0;39m - Successfully validated 7 migrations (execution time 00:00.044s)
+2026-02-22 11:53:11.738 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbMigrate:44[0;39m - Current version of schema `jeecg-boot`: 3.8.3.0
+2026-02-22 11:53:11.739 [main] [34mINFO [0;39m [36morg.flywaydb.core.internal.command.DbMigrate:44[0;39m - Schema `jeecg-boot` is up to date. No migration necessary.
+2026-02-22 11:53:11.741 [main] [39mDEBUG[0;39m [36morg.flywaydb.core.Flyway:40[0;39m - Memory usage: 118 of 226M
+2026-02-22 11:53:11.741 [main] [34mINFO [0;39m [36morg.jeecg.config.flyway.FlywayConfig:127[0;39m - ¡¾Êý¾Ý¿âÉý¼¶¡¿Æ½Ì¨¼¯³ÉÁËMySQL¿âµÄFlyway£¬Êý¾Ý¿â°æ±¾×Ô¶¯Éý¼¶! 
+2026-02-22 11:53:11.816 [main] [34mINFO [0;39m [36morg.jeecg.common.modules.redis.config.RedisConfig:60[0;39m -  --- redis config init --- 
+2026-02-22 11:53:14.064 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1220[0;39m - Using default implementation for ThreadExecutor
+2026-02-22 11:53:14.067 [main] [34mINFO [0;39m [36morg.quartz.simpl.SimpleThreadPool:268[0;39m - Job execution threads will use class loader of thread: main
+2026-02-22 11:53:14.077 [main] [34mINFO [0;39m [36morg.quartz.core.SchedulerSignalerImpl:61[0;39m - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-02-22 11:53:14.077 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:229[0;39m - Quartz Scheduler v.2.3.2 created.
+2026-02-22 11:53:14.079 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:672[0;39m - Using db table-based data access locking (synchronization).
+2026-02-22 11:53:14.081 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:145[0;39m - JobStoreCMT initialized.
+2026-02-22 11:53:14.082 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:294[0;39m - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'MyScheduler' with instanceId 'DESKTOP-11031IA1771732394067'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2026-02-22 11:53:14.083 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1374[0;39m - Quartz scheduler 'MyScheduler' initialized from an externally provided properties instance.
+2026-02-22 11:53:14.083 [main] [34mINFO [0;39m [36morg.quartz.impl.StdSchedulerFactory:1378[0;39m - Quartz scheduler version: 2.3.2
+2026-02-22 11:53:14.083 [main] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:2293[0;39m - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2396e6e1
+2026-02-22 11:53:16.447 [main] [34mINFO [0;39m [36mc.y.l.process.impl.CmpAroundAspectBeanProcess:32[0;39m - component aspect implement[nodeProcessAspect] has been found
+2026-02-22 11:53:16.712 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[classifier] has been found
+2026-02-22 11:53:16.720 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[end] has been found
+2026-02-22 11:53:16.726 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[http] has been found
+2026-02-22 11:53:16.733 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[knowledge] has been found
+2026-02-22 11:53:16.739 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[llm] has been found
+2026-02-22 11:53:16.743 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[enhanceJava] has been found
+2026-02-22 11:53:16.748 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[reply] has been found
+2026-02-22 11:53:16.753 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[start] has been found
+2026-02-22 11:53:16.756 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[subflow] has been found
+2026-02-22 11:53:16.762 [main] [34mINFO [0;39m [36mc.y.liteflow.process.impl.DeclWarpBeanProcess:37[0;39m - proxy component[switch] has been found
+2026-02-22 11:53:18.922 [main] [34mINFO [0;39m [36mo.j.config.shiro.ignore.IgnoreAuthPostProcessor:41[0;39m - Init Token ignoreAuthUrls Config [ ¼¯ºÏ ]  £º[/airag/flow/run, /airag/flow/run/*, /campusqa/mini/knowledge/search, /campusqa/mini/knowledge/detail, /campusqa/mini/history, /campusqa/mini/feedback, /campusqa/mini/history/list, /campusqa/mini/guide/list, /campusqa/mini/notice/list, /campusqa/mini/ask, /campusqa/mini/subscribe/list, /campusqa/mini/favorite/list, /campusqa/mini/favorite/toggle, /campusqa/mini/subscribe/toggle, /airag/app/queryById, /test/jeecgDemo/html, /openapi/demo/index, /airag/chat/stop/*, /airag/chat/send, /airag/chat/upload, /airag/chat/conversation/update/title, /airag/chat/init, /airag/chat/messages/clear/*, /airag/chat/receive/*, /airag/chat/conversations, /airag/chat/messages, /airag/chat/conversation/*]
+2026-02-22 11:53:18.925 [main] [34mINFO [0;39m [36mo.j.config.shiro.ignore.IgnoreAuthPostProcessor:49[0;39m - Init Token ignoreAuthUrls Config [ ºÄÊ± ] £º4ºÁÃë
+2026-02-22 11:53:18.941 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeGenerateDbConfig:50[0;39m -  Init CodeGenerate Config [ Get Db Config From application.yml ] 
+2026-02-22 11:53:19.308 [main] [34mINFO [0;39m [36mc.b.m.e.spring.MybatisPlusApplicationContextAware:40[0;39m - Register ApplicationContext instances org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71e5f61d
+2026-02-22 11:53:19.970 [main] [34mINFO [0;39m [36mo.s.b.actuate.endpoint.web.EndpointLinksResolver:58[0;39m - Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-02-22 11:53:20.149 [main] [34mINFO [0;39m [36mc.y.liteflow.parser.factory.FlowParserProvider:193[0;39m - flow info loaded from class config with el,class=com.yomahub.liteflow.parser.sql.SQLXmlELParser
+2026-02-22 11:53:20.200 [main] [34mINFO [0;39m [36mc.yomahub.liteflow.parser.sql.read.AbstractSqlRead:186[0;39m - query sql: select id, application_name, chain from airag_flow where status = 'enable' and chain is not null
+2026-02-22 11:53:20.206 [main] [34mINFO [0;39m [36mc.y.l.p.s.d.impl.LiteFlowAutoLookUpJdbcConn:72[0;39m - use dataSourceName[dataSource],has found liteflow config
+2026-02-22 11:53:20.425 [main] [34mINFO [0;39m [36morg.apache.coyote.http11.Http11NioProtocol:173[0;39m - Starting ProtocolHandler ["http-nio-18080"]
+2026-02-22 11:53:20.437 [main] [34mINFO [0;39m [36mo.s.boot.web.embedded.tomcat.TomcatWebServer:220[0;39m - Tomcat started on port(s): 18080 (http) with context path '/jeecg-boot'
+2026-02-22 11:53:20.776 [main] [34mINFO [0;39m [36mo.s.scheduling.quartz.SchedulerFactoryBean:734[0;39m - Will start Quartz Scheduler [MyScheduler] in 1 seconds
+2026-02-22 11:53:20.794 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:61[0;39m - Started JeecgSystemApplication in 15.596 seconds (JVM running for 15.949)
+2026-02-22 11:53:20.801 [main] [34mINFO [0;39m [36morg.jeecg.config.init.ShiroCacheClearRunner:26[0;39m - ¡ª¡ª¡ª Service restart, clearing all user shiro authorization cache ¡ª¡ª¡ª 
+2026-02-22 11:53:20.837 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeTemplateInitListener:30[0;39m -  Init Code Generate Template [ ¼ì²âÈç¹ûÊÇJARÆô¶¯£¬CopyÄ£°åµ½configÄ¿Â¼ ] 
+2026-02-22 11:53:20.842 [main] [34mINFO [0;39m [36morg.jeecg.config.init.CodeTemplateInitListener:33[0;39m -  Init Code Generate Template completed in 5 ms
+2026-02-22 11:53:20.863 [main] [34mINFO [0;39m [36morg.jeecg.JeecgSystemApplication:41[0;39m - 
+----------------------------------------------------------
+	Application Jeecg-Boot is running! Access URLs:
+	Local: 		http://localhost:18080/jeecg-boot
+	External: 	http://169.254.15.153:18080/jeecg-boot/doc.html
+	SwaggerÎÄµµ: 	http://169.254.15.153:18080/jeecg-boot/doc.html
+----------------------------------------------------------
+2026-02-22 11:53:21.778 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.SchedulerFactoryBean:750[0;39m - Starting Quartz Scheduler now, after delay of 1 seconds
+2026-02-22 11:53:21.917 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:3644[0;39m - ClusterManager: detected 1 failed or restarted instances.
+2026-02-22 11:53:21.917 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36mo.s.scheduling.quartz.LocalDataSourceJobStore:3503[0;39m - ClusterManager: Scanning for instance "DESKTOP-11031IA1771732185421"'s failed in-progress jobs.
+2026-02-22 11:53:21.926 [Quartz Scheduler [MyScheduler]] [34mINFO [0;39m [36morg.quartz.core.QuartzScheduler:547[0;39m - Scheduler MyScheduler_$_DESKTOP-11031IA1771732394067 started.
+2026-02-22 11:53:41.176 [http-nio-18080-exec-1] [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/jeecg-boot]:173[0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-22 11:53:41.176 [http-nio-18080-exec-1] [34mINFO [0;39m [36morg.springframework.web.servlet.DispatcherServlet:525[0;39m - Initializing Servlet 'dispatcherServlet'
+2026-02-22 11:53:41.178 [http-nio-18080-exec-1] [34mINFO [0;39m [36morg.springframework.web.servlet.DispatcherServlet:547[0;39m - Completed initialization in 2 ms
+2026-02-22 11:53:41.182 [http-nio-18080-exec-1] [31mWARN [0;39m [36morg.jeecg.common.util.RememberMeUtil:75[0;39m - RememberMe cookie value too short: 3
+2026-02-22 11:53:41.182 [http-nio-18080-exec-1] [34mINFO [0;39m [36morg.jeecg.common.util.RememberMeUtil:50[0;39m - RememberMe cookie cleared successfully
+2026-02-22 11:53:41.183 [http-nio-18080-exec-1] [31mWARN [0;39m [36mo.j.c.s.filters.RememberMeCookieSanitizerFilter:28[0;39m - Invalid rememberMe cookie detected and cleared before Shiro subject creation
+2026-02-22 11:53:41.249 [http-nio-18080-exec-1] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fampdy£¬checkCode = MpdY
+2026-02-22 11:53:42.152 [http-nio-18080-exec-2] [31mWARN [0;39m [36morg.jeecg.common.util.RememberMeUtil:75[0;39m - RememberMe cookie value too short: 3
+2026-02-22 11:53:42.153 [http-nio-18080-exec-2] [34mINFO [0;39m [36morg.jeecg.common.util.RememberMeUtil:50[0;39m - RememberMe cookie cleared successfully
+2026-02-22 11:53:42.153 [http-nio-18080-exec-2] [31mWARN [0;39m [36mo.j.c.s.filters.RememberMeCookieSanitizerFilter:28[0;39m - Invalid rememberMe cookie detected and cleared before Shiro subject creation
+2026-02-22 11:53:42.162 [http-nio-18080-exec-2] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fa8v1v£¬checkCode = 8v1V
+2026-02-22 11:53:42.685 [http-nio-18080-exec-4] [31mWARN [0;39m [36morg.jeecg.common.util.RememberMeUtil:75[0;39m - RememberMe cookie value too short: 3
+2026-02-22 11:53:42.686 [http-nio-18080-exec-4] [34mINFO [0;39m [36morg.jeecg.common.util.RememberMeUtil:50[0;39m - RememberMe cookie cleared successfully
+2026-02-22 11:53:42.686 [http-nio-18080-exec-4] [31mWARN [0;39m [36mo.j.c.s.filters.RememberMeCookieSanitizerFilter:28[0;39m - Invalid rememberMe cookie detected and cleared before Shiro subject creation
+2026-02-22 11:53:42.691 [http-nio-18080-exec-4] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fagaku£¬checkCode = GAkU
+2026-02-22 11:53:43.205 [http-nio-18080-exec-3] [31mWARN [0;39m [36morg.jeecg.common.util.RememberMeUtil:75[0;39m - RememberMe cookie value too short: 3
+2026-02-22 11:53:43.206 [http-nio-18080-exec-3] [34mINFO [0;39m [36morg.jeecg.common.util.RememberMeUtil:50[0;39m - RememberMe cookie cleared successfully
+2026-02-22 11:53:43.206 [http-nio-18080-exec-3] [31mWARN [0;39m [36mo.j.c.s.filters.RememberMeCookieSanitizerFilter:28[0;39m - Invalid rememberMe cookie detected and cleared before Shiro subject creation
+2026-02-22 11:53:43.210 [http-nio-18080-exec-3] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fa1vvu£¬checkCode = 1vvu
+2026-02-22 11:53:43.730 [http-nio-18080-exec-5] [31mWARN [0;39m [36morg.jeecg.common.util.RememberMeUtil:75[0;39m - RememberMe cookie value too short: 3
+2026-02-22 11:53:43.731 [http-nio-18080-exec-5] [34mINFO [0;39m [36morg.jeecg.common.util.RememberMeUtil:50[0;39m - RememberMe cookie cleared successfully
+2026-02-22 11:53:43.731 [http-nio-18080-exec-5] [31mWARN [0;39m [36mo.j.c.s.filters.RememberMeCookieSanitizerFilter:28[0;39m - Invalid rememberMe cookie detected and cleared before Shiro subject creation
+2026-02-22 11:53:43.735 [http-nio-18080-exec-5] [34mINFO [0;39m [36mo.jeecg.modules.system.controller.LoginController:571[0;39m - »ñÈ¡ÑéÖ¤Âë£¬Redis key = f81de37e5f0ac70a33468e71d48c16fancta£¬checkCode = ncTA
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:23 min
+[INFO] Finished at: 2026-02-22T11:54:26+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.7.18:run (default-cli) on project jeecg-system-start: Application finished with exit code: -1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

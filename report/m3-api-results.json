@@ -1,0 +1,39 @@
+﻿{
+    "backendStartedAfterSeconds":  10,
+    "login":  {
+                  "success":  true,
+                  "code":  200,
+                  "tokenPrefix":  "eyJhbGciOiJIUzI1"
+              },
+    "miniAsk":  {
+                    "success":  true,
+                    "code":  200,
+                    "intentType":  "GENERAL",
+                    "intentLabel":  "ç»¼åå¨è¯¢",
+                    "intentScore":  0.2
+                },
+    "subscribe":  {
+                      "toggleSuccess":  true,
+                      "toggleResult":  "added",
+                      "listSuccess":  true,
+                      "listCount":  1
+                  },
+    "validation":  {
+                       "feedbackShouldFail":  true,
+                       "feedbackCode":  500,
+                       "feedbackMessage":  "feedback content required",
+                       "historyShouldFail":  true,
+                       "historyCode":  500,
+                       "historyMessage":  "query or knowledgeId required"
+                   },
+    "stats":  {
+                  "overviewSuccess":  true,
+                  "overviewCode":  200,
+                  "historyTotal":  8,
+                  "askTotal":  8,
+                  "topQuestionsSuccess":  true,
+                  "topQuestionsCount":  5,
+                  "intentStatsSuccess":  true,
+                  "intentStatsCount":  1
+              }
+}
