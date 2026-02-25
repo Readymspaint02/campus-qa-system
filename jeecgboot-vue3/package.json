@@ -179,6 +179,11 @@
     "url": "https://github.com/jeecgboot/JeecgBoot/issues"
   },
   "homepage": "https://www.jeecg.com",
+  "pnpm": {
+    "overrides": {
+      "undici": "6.21.0"
+    }
+  },
   "engines": {
     "node": "^18 || >=20"
   }

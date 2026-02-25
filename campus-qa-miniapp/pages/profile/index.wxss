@@ -1,0 +1,12 @@
+.section-title {
+  margin: 10px 0;
+}
+
+.btn-light {
+  margin-right: 8px;
+  background: #5e6d82;
+}
+
+.btn-danger {
+  background: #b42318;
+}

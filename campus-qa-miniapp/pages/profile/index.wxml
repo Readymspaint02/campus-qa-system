@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="card" wx:if="{{!userId}}">
+    <view class="title">未登录</view>
+    <view class="muted" style="margin-top: 8px;">请先登录后查看历史记录和收藏内容。</view>
+    <view style="margin-top: 12px;">
+      <text class="btn" bindtap="goLogin">去登录</text>
+    </view>
+  </view>
+
+  <view wx:if="{{userId}}">
+    <view class="card">
+      <view class="title">我的账号</view>
+      <view class="muted" style="margin-top: 8px;">用户ID：{{userId}}</view>
+      <view style="margin-top: 12px;">
+        <text class="btn btn-light" bindtap="goLogin">更换账号</text>
+        <text class="btn btn-danger" bindtap="logout">退出</text>
+      </view>
+    </view>
+
+    <view class="title section-title">我的收藏</view>
+    <view class="card" wx:if="{{favoriteList.length == 0}}">
+      <view class="muted">暂无收藏</view>
+    </view>
+    <block wx:for="{{favoriteList}}" wx:key="id">
+      <view class="card" bindtap="openFavoriteDetail" data-id="{{item.id}}">
+        <view class="title">{{item.question}}</view>
+        <view class="muted">点击量：{{item.hits || 0}}</view>
+      </view>
+    </block>
+
+    <view class="title section-title">我的订阅</view>
+    <view class="card" wx:if="{{subscribeList.length == 0}}">
+      <view class="muted">暂无订阅</view>
+    </view>
+    <block wx:for="{{subscribeList}}" wx:key="id">
+      <view class="card">
+        <view class="title">订阅项</view>
+        <view class="muted">院系：{{item.deptCode || '未指定'}} | 分类：{{item.categoryId || '未指定'}}</view>
+      </view>
+    </block>
+
+    <view class="title section-title">查询历史</view>
+    <view class="card" wx:if="{{historyList.length == 0}}">
+      <view class="muted">暂无历史</view>
+    </view>
+    <block wx:for="{{historyList}}" wx:key="id">
+      <view class="card" bindtap="openHistoryDetail" data-id="{{item.knowledgeId}}">
+        <view class="title">{{item.query || '未记录查询词'}}</view>
+        <view class="muted">时间：{{item.createTime}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+

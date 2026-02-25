@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/index",
+    "pages/qa-detail/index",
+    "pages/notice/index",
+    "pages/guide/index",
+    "pages/profile/index",
+    "pages/login/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "校园问答",
+    "navigationBarBackgroundColor": "#1f1f1f",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#1f1f1f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "问答"
+      },
+      {
+        "pagePath": "pages/notice/index",
+        "text": "通知"
+      },
+      {
+        "pagePath": "pages/guide/index",
+        "text": "指南"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  }
+}

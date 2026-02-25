@@ -14,7 +14,7 @@
 
         <span title="表情" style="display: inline-block">
           <SmileOutlined ref="emojiButton" @click="handleShowEmoji" />
-          <div style="position: relative" v-show=""> </div>
+          <div style="position: relative" v-show="false"> </div>
         </span>
       </div>
       <div v-if="commentActive">
@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-  import {ref, watch, computed, inject} from 'vue';
+  import { ref, watch, computed } from 'vue';
   import { propTypes } from '/@/utils/propTypes';
   import { UserAddOutlined, PaperClipOutlined, SmileOutlined } from '@ant-design/icons-vue';
   import { Tooltip } from 'ant-design-vue';

@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="card" wx:if="{{list.length == 0}}">
+    <view class="muted">暂无通知公告</view>
+  </view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="card">
+      <view class="title">{{item.title}}</view>
+      <view class="muted">{{item.publishTime}}</view>
+      <view style="margin-top:6px;">{{item.content}}</view>
+    </view>
+  </block>
+</view>
+

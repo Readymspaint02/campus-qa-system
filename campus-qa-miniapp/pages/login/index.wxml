@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="card">
+    <view class="title">登录绑定</view>
+    <view class="muted" style="margin-top: 8px;">请输入学号或测试用户ID，用于历史、收藏和反馈记录。</view>
+    <input class="input" style="margin-top: 12px;" placeholder="例如：20243031126" value="{{userId}}" bindinput="onInput" />
+    <view style="margin-top: 12px;">
+      <text class="btn" bindtap="onLogin">保存并登录</text>
+    </view>
+  </view>
+</view>

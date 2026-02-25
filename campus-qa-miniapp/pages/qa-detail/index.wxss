@@ -1,0 +1,20 @@
+.rating-group {
+  margin-top: 10px;
+}
+
+.radio-item {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+.text-area {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 100px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}

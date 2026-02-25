@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="card">
+    <view class="title">{{item.question}}</view>
+    <view style="margin-top:8px; line-height: 1.7;">{{item.answer}}</view>
+    <view class="muted" style="margin-top:8px;">点击量：{{item.hits}}</view>
+    <view style="margin-top: 10px;">
+      <text class="btn" bindtap="toggleFavorite">收藏/取消收藏</text>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="title">提交反馈</view>
+    <radio-group bindchange="onRatingChange" class="rating-group">
+      <label class="radio-item">
+        <radio value="like" checked="{{rating === 'like'}}" /> 有用
+      </label>
+      <label class="radio-item">
+        <radio value="dislike" checked="{{rating === 'dislike'}}" /> 无用
+      </label>
+    </radio-group>
+    <textarea class="text-area" placeholder="请输入反馈内容（例如答案不准确、信息过时等）" value="{{feedbackText}}" bindinput="onFeedbackInput" />
+    <view style="margin-top: 10px;">
+      <text class="btn" bindtap="submitFeedback">提交反馈</text>
+    </view>
+  </view>
+</view>

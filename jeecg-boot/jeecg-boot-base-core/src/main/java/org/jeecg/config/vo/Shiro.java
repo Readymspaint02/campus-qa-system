@@ -7,6 +7,10 @@ package org.jeecg.config.vo;
  */
 public class Shiro {
     private String excludeUrls = "";
+    /**
+     * Base64-encoded rememberMe cipher key (16/24/32 bytes after decode)
+     */
+    private String rememberMeCipherKey = "";
 
     public String getExcludeUrls() {
         return excludeUrls;
@@ -14,5 +18,13 @@ public class Shiro {
 
     public void setExcludeUrls(String excludeUrls) {
         this.excludeUrls = excludeUrls;
+    }
+
+    public String getRememberMeCipherKey() {
+        return rememberMeCipherKey;
+    }
+
+    public void setRememberMeCipherKey(String rememberMeCipherKey) {
+        this.rememberMeCipherKey = rememberMeCipherKey;
     }
 }

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="card">
+    <input class="input" placeholder="请输入问题关键词" value="{{keyword}}" bindinput="onInput" />
+    <view style="margin-top:8px;">
+      <text class="btn" bindtap="onSearch">搜索</text>
+    </view>
+  </view>
+
+  <view class="title" style="margin:8px 0;">热门问题</view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="card" bindtap="openDetail" data-id="{{item.id}}">
+      <view class="title">{{item.question}}</view>
+      <view class="muted">点击量：{{item.hits}}</view>
+    </view>
+  </block>
+</view>
